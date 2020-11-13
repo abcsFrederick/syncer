@@ -1,0 +1,6 @@
+class PluginSettings(object):
+    ASSETSTORE_ID = 'syncer.ASSETSTORE_ID'
+    MONITOR_PARTITION = 'syncer.MONITOR_PARTITION'
+    DESTINATION_TYPE = 'syncer.DESTINATION_TYPE'
+    DESTINATION_ID = 'syncer.DESTINATION_ID'
+    MONITOR = 'syncer.MONITOR'

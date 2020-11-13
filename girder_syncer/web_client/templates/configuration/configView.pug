@@ -1,0 +1,26 @@
+.g-config-breadcrumb-container
+p.g-Syncer-settings-description
+  | Configure to set assetstore and monitor partition on local.
+if settings["syncer.MONITOR"] != true
+  button#startMonitor.btn.btn-sm.btn-primary(style="float: right") Start
+else
+  button#stopMonitor.btn.btn-sm.btn-danger(style="float: right") Stop
+form#g-Syncer-settings-form(role="form")
+  .form-group
+    label.control-label(for="g-Syncer-settings-ASSETSTORE-ID") Assetstore ID
+    p.g-Syncer-settings-description
+    input#g-Syncer-settings-ASSETSTORE-ID.input-sm.form-control(type="text", value=settings["syncer.ASSETSTORE_ID"], title="ASSETSTORE id.", placeholder="Set to assetstore id")
+
+    label.control-label(for="g-Syncer-settings-MONITOR-PARTITION") Local monitor partition
+    input#g-Syncer-settings-MONITOR-PARTITION.input-sm.form-control(type="text", value=settings["syncer.MONITOR_PARTITION"], title="MONITOR PARTITION.", placeholder="Set to the partition you want to monitor")
+
+    label.control-label(for="g-Syncer-settings-Destination-Type") Destination Type
+    select#g-Syncer-settings-DESTINATION-TYPE.input-sm.form-control
+      option(value='collection') Collection
+      option(value='folder') Folder
+      option(value='user') User
+
+    label.control-label(for="g-Syncer-settings-CRONTABD") Destination ID
+    input#g-Syncer-settings-DESTINATION-ID.input-sm.form-control(type="text", value=settings["syncer.DESTINATION_ID"], title="Destination ID.", placeholder="Set to Destination ID")
+  p#g-Syncer-settings-error-message.g-validation-failed-message
+  input.btn.btn-sm.btn-primary(type="submit", value="Save")

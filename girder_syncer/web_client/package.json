@@ -1,0 +1,19 @@
+{
+    "name": "@girder/syncer",
+    "version": "0.1.0",
+    "description": "A general purpose plugin for slurm remote task execution.",
+    "homepage": "https://github.com/abcsFrederick/syncer",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/abcsFrederick/syncer"
+    },
+    "peerDependencies": {
+        "@girder/core": "*"
+    },
+    "main": "./index.js",
+    "girderPlugin": {
+        "name": "syncer",
+        "main": "./main.js"
+    }
+}
